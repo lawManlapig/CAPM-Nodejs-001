@@ -15,14 +15,20 @@
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7",
     "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.10",
     "eslint": "^9"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "watch-testcap-001-app": "cds watch --open testcap-001-app/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-testcap-001-lr-app": "cds watch --open testcap-001-lr-app/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
       "db": "hana"
     }
-  }
+  },
+  "sapux": [
+    "app/testcap-001-lr-app"
+  ]
 }

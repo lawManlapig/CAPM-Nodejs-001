@@ -8,17 +8,22 @@ entity Students {
 }
 
 //Annotations
-annotate Students with @(
-    UI:{
-        HeaderInfo  : {
-            // $Type : 'UI.HeaderInfoType',
-            TypeName : '',
-            TypeNamePlural : '',
-            Description:{
-                Value: email
-            }
-        },
-    }
-);
+// annotate Students with @(
+//     UI:{
+//         HeaderInfo  : {
+//             // $Type : 'UI.HeaderInfoType',
+//             TypeName : '',
+//             TypeNamePlural : '',
+//             Description:{
+//                 Value: email
+//             }
+//         },
+//         SelectionFields  : [
+//             firstName,
+//             dateSignUp,
+//             email
+//         ],
+//     }
+// );
 
 
