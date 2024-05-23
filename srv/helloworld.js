@@ -9,6 +9,7 @@
 //mandatory - Export your function
 // module.exports = srvHello;
 
+// const EmailValidation = require("email-validator");
 
 //Direct (parang in-line declaration)
 module.exports = function(service){
@@ -16,3 +17,18 @@ module.exports = function(service){
         return "Hello," + lawReq.data.msg;
     })
 }
+
+//Usage of NPMJS Modules
+const BaseValidation = require("capval");
+module.exports = class BeginCheckInput extends BaseValidation{
+    isValid(InputValue){
+        var students = this.getNode();
+        // var field = this.Field;
+
+        if (students.firstName !== "law")
+        {
+            return false;
+        }
+        return true;
+    }
+};

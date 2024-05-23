@@ -2,9 +2,10 @@ namespace myCompany.hr.lms;
 
 entity Students {
     key email      : String(65) @(title: 'Email');
+        @validation : { message: 'Yow!', handler: '/srv/helloworld.js' }
         firstName  : String(20) @(title: 'First Name');
         lastName   : String(20) @(title: 'Last Name');
-        dateSignUp : Date @(title: 'Date Joined');
+        dateSignUp : Date       @(title: 'Date Joined');
 }
 
 //Annotations
@@ -25,5 +26,3 @@ entity Students {
 //         ],
 //     }
 // );
-
-
